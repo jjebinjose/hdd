@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDD Scheduling Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>HDD Scheduling Algorithms</h1>
+        <div class="input-container">
+            <label for="previousPosition">Current Head Position:</label>
+            <input type="number" id="previousPosition" required>
+        </div>
+        <div class="input-container">
+            <label for="currentPosition">Previous Head Position:</label>
+            <input type="number" id="currentPosition" required>
+        </div>
+        <div class="input-container">
+            <label for="range">Range:</label>
+            <input type="number" id="range" required>
+        </div>
+        <div class="input-container">
+            <label for="values">Values (comma-separated):</label>
+            <input type="text" id="values" required>
+        </div>
+        <div class="input-container">
+            <label for="algorithm">Select Scheduling Algorithm:</label>
+            <select id="algorithm">
+                <option value="fcfs">FCFS</option>
+                <option value="sstf">SSTF</option>
+                <option value="scan">SCAN</option>
+                <option value="cscan">C-SCAN</option>
+                <option value="look">LOOK</option>
+                <option value="clook">C-LOOK</option>
+            </select>
+        </div>
+        <button class="button" onclick="calculate()">Simulate</button>
+        <button id="bestEfficiencyButton" class="button best-efficiency">Best Efficiency</button>
+        <div id="result"></div>
+        <div id="movements"></div> 
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
